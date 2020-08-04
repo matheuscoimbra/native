@@ -40,11 +40,13 @@ script:
   - java -version
   - ./mvnw --version; ./mvnw -DbuildArgs=${BUILD_ARGS} clean verify
 # Deploy the resulting artifact to GitHub Releases
+
 deploy:
   provider: releases
+  tag_name: $TRAVIS_TAG
   api_key: $GITHUB_TOKEN
-  file: /home/travis/build/matheuscoimbra/nativegvm/target/untitled-1.0-SNAPSHOT-runner.jar
-  skip_cleanup: true
+  file: target/untitled-1.0-SNAPSHOT-runner.jar
+  cleanup: true
   on:
     tags: true
 
