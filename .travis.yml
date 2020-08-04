@@ -43,12 +43,10 @@ script:
 
 deploy:
   provider: releases
-  tag_name: $TRAVIS_TAG
   api_key: $GITHUB_TOKEN
   file: target/untitled-1.0-SNAPSHOT-runner.jar
   cleanup: true
-  on:
-    tags: true
+
 
 # avoid uploading the cache after every build
 #before_cache:
