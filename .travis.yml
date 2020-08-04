@@ -27,7 +27,7 @@ install:
   #  - if [ $TRAVIS_OS_NAME = windows ]; then choco install windows-sdk-7.1 kb2519277 zip unzip; fi
   - sdk current java
   - echo $JAVA_HOME
-  - sdk current java | grep '19.3.0.2.r11-grl' || sdk install java 19.3.0.2.r11-grl
+  - sdk current java | grep '20.0.0.r11-grl' || sdk install java 20.0.0.r11-grl
   - env
   - echo $JAVA_HOME
   - ls $JAVA_HOME/bin/
