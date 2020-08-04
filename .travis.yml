@@ -42,8 +42,8 @@ script:
 # Deploy the resulting artifact to GitHub Releases
 deploy:
   provider: releases
-  api_key: "b4b48f2947093cad572a6b4edb138efb91970a23"
-  file: build/graal/checksum-$TRAVIS_OS_NAME.zip
+  api_key: $GITHUB_TOKEN
+  file: /home/travis/build/matheuscoimbra/nativegvm/target/untitled-1.0-SNAPSHOT-runner.jar
   skip_cleanup: true
   on:
     tags: true
